@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const database_1 = require("../database"); //importo conexion
 function CodigoInfo(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
-        console.log(req.body);
+        //console.log(req.body);
         const newinfo = req.body;
         const idautosmarcas = newinfo.idautosmarcas;
         const idautosmodelos = newinfo.idautosmodelos;

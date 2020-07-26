@@ -6,7 +6,7 @@ import { User } from 'interface/user.interfaces';
 
 
 export async function CodigoInfo(req: Request, res: Response):Promise<Response> {
-console.log(req.body);
+//console.log(req.body);
    const newinfo: Infoauto = req.body;
     const idautosmarcas = newinfo.idautosmarcas;
     const idautosmodelos= newinfo.idautosmodelos;

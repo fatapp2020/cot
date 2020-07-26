@@ -29,13 +29,13 @@ function createUsers(req, res) {
         const email = newUsers.email;
         const password = newUsers.password;
         const conn = yield database_1.connect();
-        console.log('email' + email);
+        // console.log('email' + email);
         const users = yield conn.query('SELECT * FROM usuarios where email=?', [email]);
-        console.log('usuarios' + users.length);
+        // console.log('usuarios' + users.length)
         if (users.length > 0) {
-            const newUsers = req.body; //llamo a la instancia
-            const result = yield conn.query('INSERT INTO usuarios SET ?', [newUsers]);
-            console.log(result[0]);
+            // const newUsers: User = req.body; //llamo a la instancia
+            // const result =await conn.query('INSERT INTO usuarios SET ?', [newUsers])
+            // // console.log(result[0]);
             return res.json({ message: 'usuario Created' });
         }
         else {
