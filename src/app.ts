@@ -10,6 +10,7 @@ import LoginRoutes from './routes/login.routes';
 import AutosMarcas from './routes/autosmarcas.routes';
 import AutosModelos from './routes/autosmodelos.routes';
 import infoauto from './routes/infoauto.routes';
+import provincias from './routes/provincias.routes';
 export class App {
     private app: Application; //instancio
 
@@ -50,7 +51,7 @@ export class App {
 
         this.app.use('/modelos', AutosModelos);
         this.app.use('/infoauto', infoauto);
-      
+        this.app.use('/provincias', provincias);
     }
 
     async listen() {//metodo asyncronico

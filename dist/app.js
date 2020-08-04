@@ -21,6 +21,7 @@ const login_routes_1 = __importDefault(require("./routes/login.routes"));
 const autosmarcas_routes_1 = __importDefault(require("./routes/autosmarcas.routes"));
 const autosmodelos_routes_1 = __importDefault(require("./routes/autosmodelos.routes"));
 const infoauto_routes_1 = __importDefault(require("./routes/infoauto.routes"));
+const provincias_routes_1 = __importDefault(require("./routes/provincias.routes"));
 class App {
     constructor(port) {
         //private lo hace publico en toda la clase
@@ -51,6 +52,7 @@ class App {
         this.app.use('/marcas', autosmarcas_routes_1.default);
         this.app.use('/modelos', autosmodelos_routes_1.default);
         this.app.use('/infoauto', infoauto_routes_1.default);
+        this.app.use('/provincias', provincias_routes_1.default);
     }
     listen() {
         return __awaiter(this, void 0, void 0, function* () {
